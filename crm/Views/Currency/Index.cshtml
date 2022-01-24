@@ -1,0 +1,129 @@
+﻿@model IEnumerable<crm.Models.Currency>
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+   <div class="container p-2 my-3 border" style="text-align:center">
+  <h4>Aktualne kursy walut</h4>
+  
+</div>
+    
+
+    <p>
+Find by symbol: <input type="radio"  name="filter" value="symbol"><br>
+Find by name:&nbsp;&nbsp; <input type="radio"  name="filter" value="name"><br><br>
+        @Html.TextBox("SearchString") 
+       
+        <input type="submit" value="Search" class="btn btn-primary btn-sm" /></p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.ActionLink("Symbol waluty", "Index", new { sortOrder = ViewBag.SymbolSortParm })
+            </th>
+            <th>
+               @Html.ActionLink("Nazwa waluty", "Index", new { sortOrder = ViewBag.NameSortParm })
+            </th>
+            <th>
+                @Html.ActionLink("Kurs", "Index", new { sortOrder = ViewBag.RateSortParm })
+            </th>
+            <th>
+                @Html.ActionLink("Włączenie/wyłączenie synchronizacji waluty", "Index", new { sortOrder = ViewBag.SyncSortParm })
+            </th>
+            <th>
+                @Html.ActionLink("Utworzona", "Index", new { sortOrder = ViewBag.CreatedSortParm })
+            </th>
+            <th>
+               @Html.ActionLink("Zaaktualizowana", "Index", new { sortOrder = ViewBag.UpdatedSortParm })
+            </th>
+            <th>
+                @Html.ActionLink("Usunięte", "Index", new { sortOrder = ViewBag.GhostedSortParm })
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+ @foreach (var item in Model)
+    {
+        if (item.ghosted == true)
+        {
+
+            <tr>
+                <td>
+                    <span class="grayed">@Html.DisplayFor(modelItem => item.symbol)</span>
+                </td>
+                <td>
+                    <span class="grayed">@Html.DisplayFor(modelItem => item.name)</span>
+                </td>
+                <td>
+                    <span class="grayed">@Html.DisplayFor(modelItem => item.rate)</span>
+                </td>
+                <td>
+                    <span class="grayed">@Html.DisplayFor(modelItem => item.is_sync)</span>
+                </td>
+                <td>
+                    <span class="grayed">@Html.DisplayFor(modelItem => item.created_at)</span>
+                </td>
+                <td>
+                    <span class="grayed">@Html.DisplayFor(modelItem => item.updated_at)</span>
+                </td>
+                <td>
+                    <span class="grayed">@Html.DisplayFor(modelItem => item.ghosted)</span>
+                </td>
+                <td>
+                    <span class="grayed">
+                        UPDATE |
+                        DELETE
+                    </span>
+                </td>
+            </tr>
+
+
+
+        }
+        else
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.symbol)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.rate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.is_sync)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.created_at)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.updated_at)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ghosted)
+                </td>
+                <td>
+                    
+                        @Html.ActionLink("UPDATE", "Edit", new { id = item.id }) |
+                        @Html.ActionLink("DELETE", "Delete", new { id = item.id })
+                      
+                    
+                </td>
+            </tr>
+}
+}
+    </tbody>
+</table>
+</body>
+</html>
