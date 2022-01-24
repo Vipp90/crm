@@ -1,5 +1,7 @@
+using crm;
 using crm.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Web.Http;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DBContextConnection");
@@ -17,6 +19,7 @@ if (!app.Environment.IsDevelopment())
 app.UseStaticFiles();
 
 app.UseRouting();
+
 
 app.UseAuthorization();
 

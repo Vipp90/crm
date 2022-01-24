@@ -10,7 +10,12 @@
       "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
       "DisplayName": "Różne pliki",
       "ColorIndex": -1
+    },
+    "883f6f04-bc9d-435c-b6c6-b83b46aab8ca": {
+      "ProjectGuid": "883f6f04-bc9d-435c-b6c6-b83b46aab8ca",
+      "DisplayName": "Synchronizacja_walut",
+      "ColorIndex": 1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 2
 }
