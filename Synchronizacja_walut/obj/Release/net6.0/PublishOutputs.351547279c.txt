@@ -1,0 +1,6 @@
+C:\Users\Grzesiek\Desktop\Nowy folder\Synchronizacja_walut.exe
+C:\Users\Grzesiek\Desktop\Nowy folder\Synchronizacja_walut.dll
+C:\Users\Grzesiek\Desktop\Nowy folder\Synchronizacja_walut.deps.json
+C:\Users\Grzesiek\Desktop\Nowy folder\Synchronizacja_walut.runtimeconfig.json
+C:\Users\Grzesiek\Desktop\Nowy folder\Synchronizacja_walut.pdb
+C:\Users\Grzesiek\Desktop\Nowy folder\Newtonsoft.Json.dll

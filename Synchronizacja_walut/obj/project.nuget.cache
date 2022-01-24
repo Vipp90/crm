@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Vctma0BcYm+4E/9HpV2Pnt+iMJHT2LHKyECyQ6EGh8RomkP9x2wegqHyiKhh2ErvlQwQ/4Tl3NrzXott8c0BHg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Grzesiek\\Desktop\\CRM\\crm\\Synchronizacja_walut\\Synchronizacja_walut.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Grzesiek\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

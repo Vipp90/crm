@@ -1,0 +1,17 @@
+C:\Users\Grzesiek\Desktop\CRM\crm\Synchronizacja_walut\bin\Release\net6.0\Synchronizacja_walut.exe
+C:\Users\Grzesiek\Desktop\CRM\crm\Synchronizacja_walut\bin\Release\net6.0\Synchronizacja_walut.deps.json
+C:\Users\Grzesiek\Desktop\CRM\crm\Synchronizacja_walut\bin\Release\net6.0\Synchronizacja_walut.runtimeconfig.json
+C:\Users\Grzesiek\Desktop\CRM\crm\Synchronizacja_walut\bin\Release\net6.0\Synchronizacja_walut.dll
+C:\Users\Grzesiek\Desktop\CRM\crm\Synchronizacja_walut\bin\Release\net6.0\ref\Synchronizacja_walut.dll
+C:\Users\Grzesiek\Desktop\CRM\crm\Synchronizacja_walut\bin\Release\net6.0\Synchronizacja_walut.pdb
+C:\Users\Grzesiek\Desktop\CRM\crm\Synchronizacja_walut\bin\Release\net6.0\Newtonsoft.Json.dll
+C:\Users\Grzesiek\Desktop\CRM\crm\Synchronizacja_walut\obj\Release\net6.0\Synchronizacja_walut.csproj.AssemblyReference.cache
+C:\Users\Grzesiek\Desktop\CRM\crm\Synchronizacja_walut\obj\Release\net6.0\Synchronizacja_walut.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Grzesiek\Desktop\CRM\crm\Synchronizacja_walut\obj\Release\net6.0\Synchronizacja_walut.AssemblyInfoInputs.cache
+C:\Users\Grzesiek\Desktop\CRM\crm\Synchronizacja_walut\obj\Release\net6.0\Synchronizacja_walut.AssemblyInfo.cs
+C:\Users\Grzesiek\Desktop\CRM\crm\Synchronizacja_walut\obj\Release\net6.0\Synchronizacja_walut.csproj.CoreCompileInputs.cache
+C:\Users\Grzesiek\Desktop\CRM\crm\Synchronizacja_walut\obj\Release\net6.0\Synchronizacja_walut.csproj.CopyComplete
+C:\Users\Grzesiek\Desktop\CRM\crm\Synchronizacja_walut\obj\Release\net6.0\Synchronizacja_walut.dll
+C:\Users\Grzesiek\Desktop\CRM\crm\Synchronizacja_walut\obj\Release\net6.0\ref\Synchronizacja_walut.dll
+C:\Users\Grzesiek\Desktop\CRM\crm\Synchronizacja_walut\obj\Release\net6.0\Synchronizacja_walut.pdb
+C:\Users\Grzesiek\Desktop\CRM\crm\Synchronizacja_walut\obj\Release\net6.0\Synchronizacja_walut.genruntimeconfig.cache

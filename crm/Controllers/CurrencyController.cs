@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using crm.Models;
+using System.Net;
+using Newtonsoft.Json;
+using System.Web.Helpers;
 
 namespace crm.Controllers
 {
@@ -18,6 +21,65 @@ namespace crm.Controllers
         {
             _context = context;
         }
+
+
+        public string UpdateCurrencies()
+        {
+            var rates_json = new WebClient().DownloadString("https://api.exchangerate.host/latest?base=USD");
+            var currencies_symbols_json = new WebClient().DownloadString("https://openexchangerates.org/api/currencies.json");
+            currencies_symbols_json = "{\"currency\":" + currencies_symbols_json + "}";
+            Rates rates = JsonConvert.DeserializeObject<Rates>(rates_json);
+            Currencies_Dictionary names = JsonConvert.DeserializeObject<Currencies_Dictionary>(currencies_symbols_json);
+            //Currencies_Dictionary names = JsonConvert.DeserializeObject<Currencies_Dictionary>(currencies_json);
+            Currency currency;
+            bool add;
+            string result;
+            foreach (var item in rates.Rates_Dictionary)
+            {
+                add = false;
+                currency = _context.Currency.FirstOrDefault(c => c.symbol == item.Key);
+
+                if (currency == null)
+                {
+                    currency = new Currency();
+                    currency.symbol = item.Key;
+                    add = true;
+                    currency.created_at = rates.Date.DateTime;
+                }
+                currency.rate = item.Value;
+                currency.updated_at = rates.Date.DateTime;
+                names.Currencies.TryGetValue(item.Key, out var name);
+                currency.name = name;
+                try
+                {
+                    if (add == true)
+                    {
+                        _context.Currency.Add(currency);
+                    }
+                    else if (currency.is_sync == true)
+                    {
+                       _context.Entry(currency).State = EntityState.Modified;
+                    }
+                    _context.SaveChanges();
+                }
+                catch (Exception e)
+                {
+                   
+                    result = e.ToString();
+
+                    return result;
+                }
+            }
+            result = "Currencies Updated";
+
+
+            return result;
+        }
+
+
+
+
+
 
         // GET: Currency
         public async Task<IActionResult> Index(string sortOrder, string searchString,string filter)
